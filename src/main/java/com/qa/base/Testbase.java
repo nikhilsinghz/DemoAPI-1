@@ -14,7 +14,7 @@ public class Testbase {
 	public int RESPONSE_STATUS_CODE_201 = 201;
 
 	public Properties prop;
-	// TESTING GIT REPOSITORY TEST1
+	// TESTING GIT REPOSITORY TEST2
 	
 	public Testbase(){
 		try {

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\nikhilsi\AppData\Local\Temp\testng-eclipse--1220973056\testng-customsuite.xml</span>
+                    <span>C:\Users\nikhilsi\AppData\Local\Temp\testng-eclipse-1120643072\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                    <span class="method-stats">6 methods, 2 failed,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,7 +102,12 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.qa.tests.PostAPITest" hash-for-method="Incorrectusername">Incorrectusername</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.qa.tests.PostAPITest" hash-for-method="IDP_User_info_call">IDP_User_info_call</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.qa.tests.PostAPITest" hash-for-method="accesstoken_for_invalid_client_id">accesstoken_for_invalid_client_id</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -114,6 +119,16 @@
                       <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
                     </span>
                     <div class="method-list-content passed suite-Default_suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.qa.tests.PostAPITest" hash-for-method="Incorrectusername">Incorrectusername</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.qa.tests.PostAPITest" hash-for-method="InvalidPassword">InvalidPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.qa.tests.PostAPITest" hash-for-method="Loginget">Loginget</a> <!-- method navigator-link -->
@@ -144,17 +159,59 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Incorrectusername">
-                  </a> <!-- Incorrectusername -->
-                  <span class="method-name">Incorrectusername</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [200] but found [302]
+                  <a name="IDP_User_info_call">
+                  </a> <!-- IDP_User_info_call -->
+                  <span class="method-name">IDP_User_info_call</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [200] but found [401]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 	at org.testng.Assert.assertEquals(Assert.java:118)
 	at org.testng.Assert.assertEquals(Assert.java:652)
 	at org.testng.Assert.assertEquals(Assert.java:662)
-	at com.qa.tests.PostAPITest.Incorrectusername(PostAPITest.java:106)
+	at com.qa.tests.PostAPITest.IDP_User_info_call(PostAPITest.java:205)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="accesstoken_for_invalid_client_id">
+                  </a> <!-- accesstoken_for_invalid_client_id -->
+                  <span class="method-name">accesstoken_for_invalid_client_id</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at org.testng.Assert.assertEquals(Assert.java:662)
+	at com.qa.tests.PostAPITest.accesstoken_for_invalid_client_id(PostAPITest.java:157)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -194,6 +251,20 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="Incorrectusername">
+                  </a> <!-- Incorrectusername -->
+                  <span class="method-name">Incorrectusername</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="InvalidPassword">
+                  </a> <!-- InvalidPassword -->
+                  <span class="method-name">InvalidPassword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="Loginget">
                   </a> <!-- Loginget -->
                   <span class="method-name">Loginget</span>
@@ -211,7 +282,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\nikhilsi\AppData\Local\Temp\testng-eclipse--1220973056\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\nikhilsi\AppData\Local\Temp\testng-eclipse-1120643072\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -260,24 +331,36 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(6);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Incorrectusername')
+data.setCell(0, 1, 'IDP_User_info_call')
 data.setCell(0, 2, 'com.qa.tests.PostAPITest')
-data.setCell(0, 3, 1222);
+data.setCell(0, 3, 1198);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'Loginget')
 data.setCell(1, 2, 'com.qa.tests.PostAPITest')
-data.setCell(1, 3, 586);
+data.setCell(1, 3, 596);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'Loginpost')
+data.setCell(2, 1, 'Incorrectusername')
 data.setCell(2, 2, 'com.qa.tests.PostAPITest')
-data.setCell(2, 3, 386);
+data.setCell(2, 3, 417);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'accesstoken_for_invalid_client_id')
+data.setCell(3, 2, 'com.qa.tests.PostAPITest')
+data.setCell(3, 3, 397);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'InvalidPassword')
+data.setCell(4, 2, 'com.qa.tests.PostAPITest')
+data.setCell(4, 3, 394);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'Loginpost')
+data.setCell(5, 2, 'com.qa.tests.PostAPITest')
+data.setCell(5, 3, 388);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -307,16 +390,30 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">Incorrectusername</span>
+                <span class="method-name">IDP_User_info_call</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <span class="method-name">Incorrectusername</span>
+                <span class="method-start">1201 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">InvalidPassword</span>
+                <span class="method-start">1619 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
                 <span class="method-name">Loginget</span>
-                <span class="method-start">1223 ms</span>
+                <span class="method-start">2014 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">Loginpost</span>
-                <span class="method-start">1824 ms</span>
+                <span class="method-start">2611 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">accesstoken_for_invalid_client_id</span>
+                <span class="method-start">3000 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

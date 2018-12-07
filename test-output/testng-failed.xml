@@ -5,7 +5,8 @@
     <classes>
       <class name="com.qa.tests.PostAPITest">
         <methods>
-          <include name="Incorrectusername"/>
+          <include name="IDP_User_info_call"/>
+          <include name="accesstoken_for_invalid_client_id"/>
         </methods>
       </class> <!-- com.qa.tests.PostAPITest -->
     </classes>

@@ -40,7 +40,7 @@ public class GetAPITest extends Testbase {
 	//@Test(priority = 1)
 	public void postLoginTest() throws ClientProtocolException, IOException {
 		RestClient restClient = new RestClient();
-		closebaleHttpResponse = restClient.get("http://35.157.221.79:5000//account//login");
+		closebaleHttpResponse = restClient.get("http:/35.157.221.79:5000/account/login");
 
 		// a.Status Code
 		int statusCode = closebaleHttpResponse.getStatusLine().getStatusCode();

@@ -1,0 +1,104 @@
+package com.qa.tests;
+
+import org.testng.annotations.Test;
+import static io.restassured.RestAssured.given;
+
+import java.util.List;
+
+import io.restassured.RestAssured;
+import io.restassured.http.Header;
+import io.restassured.http.Headers;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+
+public class LoginFlow {
+	
+
+	String ReturnUrl = ("/connect/authorize/callback?client_id=zelfstroomapp&scope=openid%20profile%20roles%20gateway_rights%20offline_access%20userId&response_type=code&redirect_uri=nl.zelfstroom.app%3A%2F%2Fcallback&response_mode=form_post&state=30906730-14d1-4083-ac3b-b763dd528acd&code_challenge=qjrzSW9gMiUgpUvqgEPE4_-8swvyCtfOVvg55o5S_es&code_challenge_method=S256");
+    String Location = null;
+	// @Test(priority = 1)
+	public void loginGet() {
+		RestAssured.baseURI = "http://35.157.221.79:5000";
+
+		Response res = given().
+
+				when().get("/account/login").then().assertThat().statusCode(200).extract().response(); // This call will
+																										// simply return
+																										// the Login
+																										// Page.
+
+		String responseString = res.asString();
+		System.out.println(responseString);
+	}
+
+	@Test(priority = 2)
+	public void loginPost() {
+		RestAssured.baseURI = "http://35.157.221.79:5000";
+
+		Response res = given().
+				param("button", "login").
+				param("Username", "Han").
+				param("Password", "Vermolen").
+				param("ReturnUrl", ReturnUrl).
+			when()
+				.post("/account/login").then().assertThat().statusCode(302).extract().response(); // Expected status code is "302", URL will redirect and set to callback url
+																								
+		
+		Headers allHeaders = res.headers();
+		 
+		 // Iterate over all the Headers
+		 for(Header header : allHeaders)
+		 {
+		 System.out.println("Key: " + header.getName() + " Value: " + header.getValue());
+		
+         Location = header.getValue();
+
+// Taking the Location value and making subsequent Get call from it 
+//		 JsonPath js = new JsonPath(res);
+//		 String errorMsg = js.get("error");
+		 
+		 }  
+         
+
+		 }
+
+	public void generateCode() {
+		// TODO Auto-generated method stub
+		
+		RestAssured.baseURI = "http://35.157.221.79:5000";
+		
+		when().
+		param("ReturnUrl", ReturnUrl).
+		
+		
+		
+		
+	}
+
+	@Test(priority = 5)
+	public void makingAuthresquest  () { // Sending Payloads to generate "id_token" , "access_token" , "refresh_token"
+									// while making POST request.
+		RestAssured.baseURI = "http://35.157.221.79:5000";
+
+		// Task - 1 Grab The Response
+		Response res = given().param("client_id", "zelfstroomapp"). // Incorrect Client_id
+				param("client_secret", "rhBNDktLtn4b6l9WTgmtzCvlUAPgFC")
+				.param("code", "1bcaca38b264e154f8410d2c2ec08017283b19afbd055060e093e5207237fe71")
+				.param("redirect_uri", "nl.zelfstroom.app://callback").param("grant_type", "authorization_code")
+				.param("refresh_token",
+						"a1f25a033945372b2e201c9417433e2c3fe31fb7fdfa442e353cd9c9eff6ffa6, parameterValues")
+				.param("code_verifier", "M25iVXpKU3puUjFaYWg3T1NDTDQtcW1ROUY5YXlwalNoc0hhakxifmZHag").when()
+				.post("/connect/token").then().assertThat().statusCode(400).extract().response();
+
+		// Task-2 Grab the values from Response
+		String responseString = res.asString();
+		System.out.println(responseString);
+
+		// Task-3 getting the bodies from jason Response
+		JsonPath js = new JsonPath(responseString);
+		String errorMsg = js.get("error");
+		System.out.println("This is the Alert Message:" + errorMsg);
+	}
+
+}

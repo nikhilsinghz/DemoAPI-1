@@ -1,0 +1,350 @@
+{
+	"info": {
+		"_postman_id": "1ae7482f-f474-4710-9440-49c64acd7eff",
+		"name": "shareidp Han",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "IDP login refresh and access userId",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "__RequestVerificationToken",
+							"value": "CfDJ8J2VJ7jSd71MkbvlwNIo-UHCzrpyc27ZYg_RYVLz9fKd-F3g-RFBO1Uocq7QXXVyHolC6pCf93xG2z8VTv9TTme6LMtB7TbDxsIufrzwIwcKyxZMh4Wz1Amg-89Cg1n0b4kodgg66bRboqMRI9uS9hc",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "button",
+							"value": "login",
+							"type": "text"
+						},
+						{
+							"key": "Password",
+							"value": "Vermolen",
+							"type": "text"
+						},
+						{
+							"key": "RememberLogin",
+							"value": "false",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "ReturnUrl",
+							"value": "/connect/authorize/callback?client_id=zelfstroomapp&scope=openid%20profile%20roles%20gateway_rights%20offline_access%20userId&response_type=code&redirect_uri=nl.zelfstroom.app%3A%2F%2Fcallback&response_mode=form_post&state=30906730-14d1-4083-ac3b-b763dd528acd&code_challenge=qjrzSW9gMiUgpUvqgEPE4_-8swvyCtfOVvg55o5S_es&code_challenge_method=S256",
+							"type": "text"
+						},
+						{
+							"key": "Username",
+							"value": "Han",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://35.157.221.79:5000/account/login",
+					"protocol": "http",
+					"host": [
+						"35",
+						"157",
+						"221",
+						"79"
+					],
+					"port": "5000",
+					"path": [
+						"account",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IDP login Invalid Username",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "__RequestVerificationToken",
+							"value": "CfDJ8J2VJ7jSd71MkbvlwNIo-UHCzrpyc27ZYg_RYVLz9fKd-F3g-RFBO1Uocq7QXXVyHolC6pCf93xG2z8VTv9TTme6LMtB7TbDxsIufrzwIwcKyxZMh4Wz1Amg-89Cg1n0b4kodgg66bRboqMRI9uS9hc",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "button",
+							"value": "login",
+							"type": "text"
+						},
+						{
+							"key": "Password",
+							"value": "Vermolen",
+							"type": "text"
+						},
+						{
+							"key": "RememberLogin",
+							"value": "false",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "ReturnUrl",
+							"value": "/connect/authorize/callback?client_id=zelfstroomapp&scope=openid%20profile%20roles%20gateway_rights%20offline_access%20userId&response_type=code&redirect_uri=nl.zelfstroom.app%3A%2F%2Fcallback&response_mode=form_post&state=30906730-14d1-4083-ac3b-b763dd528acd&code_challenge=qjrzSW9gMiUgpUvqgEPE4_-8swvyCtfOVvg55o5S_es&code_challenge_method=S256",
+							"type": "text"
+						},
+						{
+							"key": "Username",
+							"value": "Han",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://35.157.221.79:5000/account/login",
+					"protocol": "http",
+					"host": [
+						"35",
+						"157",
+						"221",
+						"79"
+					],
+					"port": "5000",
+					"path": [
+						"account",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IDP login Invalid Password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "__RequestVerificationToken",
+							"value": "CfDJ8J2VJ7jSd71MkbvlwNIo-UHCzrpyc27ZYg_RYVLz9fKd-F3g-RFBO1Uocq7QXXVyHolC6pCf93xG2z8VTv9TTme6LMtB7TbDxsIufrzwIwcKyxZMh4Wz1Amg-89Cg1n0b4kodgg66bRboqMRI9uS9hc",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "button",
+							"value": "login",
+							"type": "text"
+						},
+						{
+							"key": "Password",
+							"value": "Vermolen",
+							"type": "text"
+						},
+						{
+							"key": "RememberLogin",
+							"value": "false",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "ReturnUrl",
+							"value": "/connect/authorize/callback?client_id=zelfstroomapp&scope=openid%20profile%20roles%20gateway_rights%20offline_access%20userId&response_type=code&redirect_uri=nl.zelfstroom.app%3A%2F%2Fcallback&response_mode=form_post&state=30906730-14d1-4083-ac3b-b763dd528acd&code_challenge=qjrzSW9gMiUgpUvqgEPE4_-8swvyCtfOVvg55o5S_es&code_challenge_method=S256",
+							"type": "text"
+						},
+						{
+							"key": "Username",
+							"value": "Han",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://35.157.221.79:5000/account/login",
+					"protocol": "http",
+					"host": [
+						"35",
+						"157",
+						"221",
+						"79"
+					],
+					"port": "5000",
+					"path": [
+						"account",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IDP auth request token using code",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "scope",
+							"value": "openid profile roles gateway_rights offline_access userId",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "client_id",
+							"value": "zelfstroomapp",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "rhBNDktLtn4b6l9WTgmtzCvlUAPgFC",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "157882cf25f8e5028dea436b3192fa85709e909caccd624f94a4d8bac99fdcbf",
+							"type": "text"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "nl.zelfstroom.app://callback",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "grant_token",
+							"type": "text"
+						},
+						{
+							"key": "refresh_token",
+							"value": "a1f25a033945372b2e201c9417433e2c3fe31fb7fdfa442e353cd9c9eff6ffa6",
+							"type": "text"
+						},
+						{
+							"key": "code_verifier",
+							"value": "M25iVXpKU3puUjFaYWg3T1NDTDQtcW1ROUY5YXlwalNoc0hhakxifmZHag",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://35.157.221.79:5000/connect/token",
+					"protocol": "http",
+					"host": [
+						"35",
+						"157",
+						"221",
+						"79"
+					],
+					"port": "5000",
+					"path": [
+						"connect",
+						"token"
+					]
+				},
+				"description": "The code comes from the previous /account/login request's response."
+			},
+			"response": []
+		},
+		{
+			"name": "IDP User info call ",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjExNjZmNzUzNjI5MWUxOWJlZWQzMDJiZDNmYTYzNDRhIiwidHlwIjoiSldUIn0.eyJuYmYiOjE1NDIzNzQ2MjYsImV4cCI6MTU0MjM3ODIyNiwiaXNzIjoiaHR0cDovLzM1LjE1Ny4yMjEuNzk6NTAwMCIsImF1ZCI6Imh0dHA6Ly8zNS4xNTcuMjIxLjc5OjUwMDAvcmVzb3VyY2VzIiwiY2xpZW50X2lkIjoiemVsZnN0cm9vbWFwcCIsInN1YiI6IjU1ZjJlMWU2LWY4YWEtNDBmNi1iYjI4LWI3ZWM0YzcyYjc2YyIsImF1dGhfdGltZSI6MTU0MjM3NDYxNSwiaWRwIjoibG9jYWwiLCJzY29wZSI6WyJvcGVuaWQiLCJwcm9maWxlIiwicm9sZXMiLCJ1c2VySWQiLCJnYXRld2F5X3JpZ2h0cyIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwd2QiXX0.I7zRso07BEGMlMQtBYenM9Y6Fnw0b-DqPsM8IVnMwQRT07GpRkUlKvqjyU4I2vEhd96KJU7ShP7dnwRctrhfnRDawyfLC5jkZ7_pOXokgF5VtZbf2gNEUEam378f2c5gcFpTg-h3J6CyKaLylojSdO6Lu3ZFsku9Hiz0NtyEQ3gZSpbdXtRg8UHj7eUW4ou4c3Ww5sR4C2wZ4D9pGgLBWMLJbCMNiH3r6tJ74XB8Ow1mF9NYNi7PqJbS_kWh6lzrL8rkqP5qOk9wWMBnNpoNvcLEm6qIiwletvtKiZasJtba59vCacsFUHZ7WNnjFpY63QwrTDz-M2YA7nEJw3LqEw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://35.157.221.79:5000/connect/userinfo",
+					"protocol": "http",
+					"host": [
+						"35",
+						"157",
+						"221",
+						"79"
+					],
+					"port": "5000",
+					"path": [
+						"connect",
+						"userinfo"
+					]
+				},
+				"description": "Uses the access token from the /token endpoint to request user information (only what's stored in the IDP!)"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "6ecb8f88-63b6-44d8-a33e-b10fc85d7bd9",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "216c7296-3bbd-4ab4-99f2-5d3b1c25e08e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
